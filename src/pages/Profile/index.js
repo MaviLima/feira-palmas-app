@@ -48,23 +48,23 @@ export default function Profile(){
     <div className="profile-container">
       <header>
         <img src={logoLogin} alt="Be The Hero" />
-        <span>Bem Vinda, {ongName}</span>
+        <span>Bem Vindo(a), {ongName}</span>
 
-        <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
+        <Link className="button" to="/incidents/new">Cadastrar novo produto</Link>
         <button type="button" onClick={handleLogout}>
           <FiPower size={18} color="#e02041"/>
         </button>
       </header>
 
-      <h1>Casos Cadastrados</h1>
+      <h1>Produtos cadastrados</h1>
 
       <ul>
         {incidents.map(incident => (
           <li key={incident.id}>
-            <strong>Caso:</strong>
+            <strong>PRODUTO:</strong>
             <p>{incident.title}</p>
 
-            <strong>Descrição:</strong>
+            <strong>DESCRIÇÃO:</strong>
             <p>{incident.description}</p>
 
             <strong>Valor:</strong>

@@ -5,7 +5,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 
 import './styles.css'
 
-import logoImg from '../../assets/logo.svg';
+import logoImg from '../../assets/logo.png';
 import api from '../../services/api';
 
 export default function NewIncident(){
@@ -31,7 +31,7 @@ export default function NewIncident(){
 
       history.push('/profile')
     } catch(err){
-      alert('Não foi possível cadastrar o novo casa, tente novamente.')
+      alert('Não foi possível cadastrar novo produto, tente novamente.')
     }
   }
 
@@ -39,19 +39,19 @@ export default function NewIncident(){
     <div className="new-incident-container">
       <div className="content">
         <section>
-        <img src={logoImg} alt="Be The Hero"/>
+        <img className="logo" src={logoImg} alt="Be The Hero"/>
 
-        <h1>Cadastrar novo caso</h1>
-        <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
+        <h1>Cadastrar novo produto</h1>
+        <p>Descreva o produto</p>
 
         <Link className="back-link" to="/profile">
             <FiArrowLeft size={16} color="#E02041" />
-            Voltar para home
+            Voltar para o início
           </Link>
         </section>
 
         <form onSubmit={handleNewIncident}>
-          <input type="text" placeholder="Título do caso" value={title} onChange={e => setTitle(e.target.value)}/>
+          <input type="text" placeholder="Nome do produto" value={title} onChange={e => setTitle(e.target.value)}/>
           <textarea placeholder="Descrição" value={description} onChange={e => setDescription(e.target.value)}/>
           <input placeholder="Valor em reais" value={value} onChange={e => setValue(e.target.value)}/>
 
